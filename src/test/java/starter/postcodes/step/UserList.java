@@ -14,4 +14,5 @@ public class UserList {
                 .pathParam("page",pagenumber)
                 .get(URL);
     }
+
 }

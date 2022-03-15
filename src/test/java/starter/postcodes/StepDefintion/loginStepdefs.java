@@ -1,2 +1,25 @@
-package starter.postcodes.StepDefintion;public class loginStepdefs {
+package starter.postcodes.StepDefintion;
+
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import net.serenitybdd.rest.SerenityRest;
+import net.thucydides.core.annotations.Steps;
+import starter.postcodes.step.Login;
+
+public class loginStepdefs {
+
+    @Steps
+    Login login;
+
+   @When("Patient login with username {string} and password is {string}")
+    public void patientlogin(String userName, String password){
+       login.postUser(userName, password);
+    }
+
+   @Then("Patient success login")
+    public void patientsucceslogin(){
+       SerenityRest.then()
+               .statusCode(200);
+   }
+
 }
