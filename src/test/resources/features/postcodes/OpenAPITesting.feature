@@ -7,15 +7,22 @@ Feature: Open API Testing
     Then New user is created
     And New user name is "RofikAw" and job is "Quality Assurance"
 
-  @loginpatient
-  Scenario: login mr clinic (Patient)
-    When Patient login with username "daenerys46" and password is "daenery7"
-    Then Patient success login
+  @login
+  Scenario: login mr clinic
+    When user login with username "daenerys46" and password is "daenery7"
+    Then user success login
 
-#  @loginpatient
-#  Scenario: login doctor
-#    When Patient login with username "completeHotaru" and password is "hotaru"
-#    Then Patient success login
+#Dashboard Admin
+
+  @[POST]addvisit
+  Scenario: post add visit
+    When post add visit with insert body form-data doctor_uid "VtPsYQUdHgqiZJ2mujSLvJ" date "15-03-2022" complaint "tyfus"
+    Then success add visit
+
+#  @GetTotalVisitList
+#  Scenario: Get Total Visit List
+#    When get total visit list with insert form query params kind "doctor" uid "VtPsYQUdHgqiZJ2mujSLvJ" status "pending"
+#    Then success get patient profile
 
   @Registrasidoctor
   Scenario: doctor register
@@ -33,21 +40,21 @@ Feature: Open API Testing
     Then success update Doctor
 
   @UpdatePatient
-  Scenario: Update Patient
+  Scenario: Update Patientsuccess get all Patient list
     When update new doctor with username "completeHotarunew" email is "hotaru@gmail.com" password is "hotaru" gender is "wanita" address is "kalimaya" job is "Software Enginner" status "kawin" religion "Judaism"
     Then success update Patient
 
-  @GetPatientProfile
-  Scenario: Get Patient Profile
-    When get patient profile with insert form query params patient_uid "WiRttJjaRjfoRzMmZ6bWgk"
-    Then success get patient profile
+  @GetAllPatientList
+  Scenario: Get List Patient
+    When admin want to Get all list patient with input several of query params contain kind "doctor" uid "VtPsYQUdHgqiZJ2mujSLvJ" and grouped "patient"
+    Then success get all Patient list
 
-  @GetVisit
-  Scenario: Get visit
-    When user get visit by status "pending"
-    Then user success get the visit list
+  @GetVisitQueue
+  Scenario: Get visit Queue
+    When admin want to get visit Queue by in several of query params containt kind "doctor" uid "VtPsYQUdHgqiZJ2mujSLvJ" and status "pending"
+    Then admin want to success get the visit queue list
 
-  @UpdateVisit
-  Scenario: Put visit
-    When user update visit with input query params visit_uid "iPpXsHdpHQEX45vCgDbo8" with name of complaint "Membatalkan Komplain" with main diagnose penyakit sejuta umat yakni "Tifus" and additional diagnose "Gastroenteritis"  action "Minum obat dan jangan makan pedes" recipe "Amoxxicillin" bloodPressuse "120" heart rate "90" O2 saturated "100" weight "75"  height "174" bmi "2" status "cancelled"
+  @UpdateVisitConfirmation
+  Scenario: Put visit Confirmation
+    When user update visit with input query params visit_uid "iypcsTa3fjto9mwiqrSG27" status "ready"
     Then user success update visit status

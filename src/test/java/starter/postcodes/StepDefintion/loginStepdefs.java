@@ -11,12 +11,12 @@ public class loginStepdefs {
     @Steps
     Login login;
 
-   @When("Patient login with username {string} and password is {string}")
+   @When("user login with username {string} and password is {string}")
     public void patientlogin(String userName, String password){
        login.postUser(userName, password);
     }
 
-   @Then("Patient success login")
+   @Then("user success login")
     public void patientsucceslogin(){
        SerenityRest.then()
                .statusCode(200);

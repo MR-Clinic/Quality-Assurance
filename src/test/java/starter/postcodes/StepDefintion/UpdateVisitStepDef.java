@@ -13,9 +13,9 @@ public class UpdateVisitStepDef {
     @Steps
     UpdateVisit updateVisit;
 
-        @When("user update visit with input query params visit_uid {} with name of complaint {} with main diagnose penyakit sejuta umat yakni {} and additional diagnose {}  action {} recipe {} bloodPressuse {} heart rate {} O2 saturated {} weight {}  height {} bmi {} status {}")
-        public void userupdatevisitwithinputqueryparams(String QueryParams, String complaint, String mainDiagnose, String additionDiagnose, String action, String recipe, String bloodPressuse, String heartRate, Integer o2Saturate, String weight, String height, String bmi, String status)  {
-            updateVisit.updatevisitList(QueryParams, complaint, mainDiagnose, additionDiagnose, action, recipe, bloodPressuse, heartRate, o2Saturate, weight, height, bmi, status);
+        @When("user update visit with input query params visit_uid {} status {}")
+        public void userupdatevisitwithinputqueryparams(String QueryParams, String status)  {
+            updateVisit.updatevisitList(QueryParams, status);
         }
 
         @Then("user success update visit status")
