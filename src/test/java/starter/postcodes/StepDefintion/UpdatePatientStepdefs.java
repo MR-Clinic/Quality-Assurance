@@ -12,9 +12,9 @@ public class UpdatePatientStepdefs {
     @Steps
     UpdatePatient updatePatient;
 
-    @When("update new doctor with username {string} email is {string} password is {string} gender is {string} address is {string} job is {string} status {string} religion {string}")
-    public void updateNewDoctorWithUsernameEmailIsPasswordIsGenderIsAddressIsJobIsStatusReligion(String userName, String email,String password, String gender, String address, String job, String status, String religion) {
-        updatePatient.putPatient(userName, email, password, gender, address, job, status, religion);
+    @When("update new doctor with password is {string} gender is {string} address is {string} job is {string} status {string} religion {string} file {}")
+    public void updateNewDoctorWithUsernameEmailIsPasswordIsGenderIsAddressIsJobIsStatusReligion(String password, String gender, String address, String job, String status, String religion, String file) {
+        updatePatient.putPatient(password, gender, address, job, status, religion, file);
     }
 
     @Then("success update Patient")

@@ -6,6 +6,8 @@ import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
 import starter.postcodes.step.RegisterPatient;
 
+import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
+
 public class RegisterPatientMyStepdefs {
         @Steps
         RegisterPatient registerPatient;
@@ -16,7 +18,12 @@ public class RegisterPatientMyStepdefs {
 
         @Then("success add patient")
         public void successaddPatient(){
-                SerenityRest.then()
-                        .statusCode(500);}
+//                SerenityRest.then()
+//                        .statusCode(400);
+            seeThatResponse("ok",
+                    response -> {
+                        response.statusCode(200);
+                    });
+        }
     }
 

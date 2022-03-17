@@ -20,6 +20,8 @@ public class loginStepdefs {
     public void patientsucceslogin(){
        SerenityRest.then()
                .statusCode(200);
+       System.out.println(SerenityRest.then()
+               .statusCode(200));
    }
 
 }

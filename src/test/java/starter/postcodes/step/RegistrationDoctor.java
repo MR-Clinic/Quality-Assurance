@@ -8,15 +8,18 @@ import org.json.JSONObject;
 public class RegistrationDoctor {
     public String URLRegisterDoctor="https://faliqadlan.cloud.okteto.net/doctor";
     @Step
-    public void postRegistDoctor(String userName, String email, String password){
-        JSONObject data = new JSONObject();
-        data.put("userName", userName);
-        data.put("email", email);
-        data.put("password", password);
-
+    public void postRegistDoctor(String userName, String email, String password, String name, String address, String status, String openDay, String closeDay, String capacity){
         SerenityRest.given()
-                .contentType(ContentType.JSON)
-                .body(data.toString())
+                .contentType("multipart/form-data")
+                .multiPart("userName", userName)
+                .multiPart("email", email)
+                .multiPart("password", password)
+                .multiPart("name", name)
+                .multiPart("address", address)
+                .multiPart("status", status)
+                .multiPart("openDay", openDay)
+                .multiPart("closeDay", closeDay)
+                .multiPart("capacity", capacity)
                 .log().all()
                 .when()
                 .post(URLRegisterDoctor);

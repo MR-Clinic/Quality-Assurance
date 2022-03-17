@@ -13,7 +13,7 @@ public class UpdateVisitStepDef {
     @Steps
     UpdateVisit updateVisit;
 
-        @When("user update visit with input query params visit_uid {} status {}")
+        @When("user update visit with input query params visit_uid {} and body form-data {}")
         public void userupdatevisitwithinputqueryparams(String QueryParams, String status)  {
             updateVisit.updatevisitList(QueryParams, status);
         }
