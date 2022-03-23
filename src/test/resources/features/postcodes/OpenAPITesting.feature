@@ -6,9 +6,14 @@ Feature: Open API Testing
 #    Then New user is created
 #    And New user name is "RofikAw" and job is "Quality Assurance"
 
+  @TestLinkAPI
+  Scenario: test link API
+    When user test API link with input several body userName "admin" email "admin@mail" and password "adminadmin"
+    Then user success test link API
+
   @login
   Scenario: login mr clinic
-    When user login with username "melatidokter212" and password is "melatidokter1"
+    When user login with username "rofik1" and password is "rofik123"
     Then user success login
 
   @Registrasidoctor
@@ -22,8 +27,8 @@ Feature: Open API Testing
     Then success add patient
 
   @UpdatePatient
-  Scenario: Update Patient success get all Patient list
-    When update new doctor with password is "hotaru" gender is "wanita" address is "kalimaya" job is "Software Enginner" status "kawin" religion "Judaism" file "https://www.teralogistics.com/wp-content/uploads/2020/12/default.png"
+  Scenario: Update Patient success get all Patient list/ register patient part 2
+    When update new doctor with nik "3305567891234567" name "narto" gender "pria" address "konoha jiraya nakagama" job "shinobi" status "belumKawin" religion "islam" placeBirth "malang" dob "05-05-2000"
     Then success update Patient
 
   @GetAllPatientList
