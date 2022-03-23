@@ -12,7 +12,7 @@ public class DeletePatientStepdefs {
     @Steps
     DeletePatient deletePatient;
 
-    @When("user want to delete patient account with insert the endpoint")
+    @When("user want to delete patient account with insert the endpoint and bearer token")
     public void userwanttodeletepatient() {
         deletePatient.deletePatientName();
     }

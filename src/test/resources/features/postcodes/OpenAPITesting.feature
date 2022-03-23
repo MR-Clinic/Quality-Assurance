@@ -2,12 +2,12 @@ Feature: Open API Testing
 
 
   @GetListPatientThisDay
-  Scenario: GetListPatientThisDay
+  Scenario: Get List Patient This Day
     When user want to Get all list patient with input several of query params contain kind "doctor" uid "VtPsYQUdHgqiZJ2mujSLvJ" and day of this day "14-03-2022" and grouped "patient"
     Then user get list patient today
 
   @getPatientGeneralData
-  Scenario: Get Patient General Data
+  Scenario: Get Patient General Data/ Patient Information
     When user get patient general data with input query params patient_uid "WiRttJjaRjfoRzMmZ6bWgk"
     Then admin get list patient today
 
@@ -26,6 +26,26 @@ Feature: Open API Testing
     When user edit doctor account with input several body form-data contain name "dr sulaiman hadar al farezy" address "karangnggayu, bayunmas, jawa tengah" status "available" openDay "senin" closeDay "kamis" capacity "11" and file "https://www.teralogistics.com/wp-content/uploads/2020/12/default.png"
     Then user success edit Doctor Profile Account
 
+  @CheckUsernameDoctor
+  Scenario: get profile doctor by userName
+    When user get profile doctor check by userName "bejo123"
+    Then user get profile doctor by userName
+
+  @CheckUsernamePatient
+  Scenario: get profile patient by userName
+    When user get profile patient check by userName "hotaru123"
+    Then user get profile patient by userName
+
+  @CheckemailDoctor
+  Scenario: get profile doctor by email
+    When user get profile doctor check by email "muhammadbejo47@gmail.com"
+    Then user get profile doctor by email
+
+  @CheckemailPatient
+  Scenario: get profile patient by email
+    When user get profile patient check by email "genhotaru@gmail.com"
+    Then user get profile patient by email
+
   @DeleteDoctor
   Scenario: delete doctor
     When user delete doctor with name "dr sadad"
@@ -33,7 +53,7 @@ Feature: Open API Testing
 
   @DeletePatient
   Scenario: delete patient
-    When user want to delete patient account with insert the endpoint
+    When user want to delete patient account with insert the endpoint and bearer token
     Then user success delete patient
 
   @DeleteVisit
