@@ -8,12 +8,7 @@
 * [General Info](#general-information-about-testing-project)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
-* [Screenshots](#screenshots)
-* [Setup](#setup)
-* [Usage](#usage)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
+* [Dokumentation](#dokumentation)
 * [Contact](#contact)
 <!-- * [License](#license) -->
 
@@ -81,6 +76,6 @@ List Feature MR Clinic [_here_](https://frontend-mr-clinic.vercel.app/):
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
-## Setup
+## Contact
 - Yessica Sitorus - [Github](https://github.com/yessicas) - [Linkedin](https://www.linkedin.com/in/yessica-sitorus-8a5088180/)
 - Rofik Awaludin - [Github](https://github.com/rofikaw99/MR_Clinic) - [Linkedin](https://www.linkedin.com/in/rofikawaludin/)
