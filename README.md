@@ -70,9 +70,9 @@ List Feature MR Clinic [_here_](https://frontend-mr-clinic.vercel.app/):
 * [API Manual Testing](https://docs.google.com/spreadsheets/d/19xVu_lydPWP84Ka3DdC08FG9JKl86nxHYkL6AX03KK8/edit#gid=0)
 * [Web Manual Testing](https://docs.google.com/spreadsheets/)
 * [API Automation Testing Part1](https://github.com/MR-Clinic/Quality-Assurance/tree/SerenityRestPart1) [API Automation Testing Part1](https://github.com/MR-Clinic/Quality-Assurance/tree/SerenityRestPart2)
-* [Web Automation Testing](https://github.com/MR-Clinic/Quality-Assurance/)
+* [Web Automation Testing](https://github.com/MR-Clinic/Quality-Assurance/tree/WebAutomation)
 * [API Automation Report](https://github.com/MR-Clinic/Quality-Assurance/tree/master/SSSerenityRestAPI)
-* [Web Automation Report](https://github.com/MR-Clinic/Quality-Assurance/)
+* [Web Automation Report](https://docs.google.com/presentation/d/170nx8kN9H0I2PKSLaS4Iq94NU3nHOhxwSR-A2fjduxs/edit#slide=id.g11a8aacf443_0_0)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
