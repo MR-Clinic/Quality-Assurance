@@ -78,8 +78,9 @@ List Feature MR Clinic [_here_](https://frontend-mr-clinic.vercel.app/):
 
 
 ## Contact
-- Yessica Sitorus - [Github](https://github.com/yessicas) - [Linkedin](https://www.linkedin.com/in/yessica-sitorus-8a5088180/)
 - Rofik Awaludin - [Github](https://github.com/rofikaw99/MR_Clinic) - [Linkedin](https://www.linkedin.com/in/rofikawaludin/)
+- Yessica Sitorus - [Github](https://github.com/yessicas) - [Linkedin](https://www.linkedin.com/in/yessica-sitorus-8a5088180/)
+
 
 ## Other Project By RofikAw
 * [Web_Automation_Test_Amazon_Site](https://github.com/rofikaw99/Automation_Amazon_Site)
